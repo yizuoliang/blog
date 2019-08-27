@@ -23,3 +23,7 @@ SpringBoot+Lucene的一些整合,在与SpringBoot的整合过程中的一些问�
 Java的动态代理
 
 项目地址： <https://github.com/yizuoliang/blog/tree/master/Java/01_Java_Proxy>
+
+02_使用批处理方式配置Java环境
+
+项目地址： <https://github.com/yizuoliang/blog/tree/master/Java/02_使用批处理方式配置Java环境>
