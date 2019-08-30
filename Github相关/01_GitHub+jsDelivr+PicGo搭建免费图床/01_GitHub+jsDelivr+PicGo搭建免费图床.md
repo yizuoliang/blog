@@ -1,4 +1,4 @@
-# GitHub+jsDelivr+PicGo搭建免费图床
+GitHub+jsDelivr+PicGo搭建免费图床
 
 
 
@@ -20,7 +20,7 @@
 
 按照下列步骤依次生成token,生成的token只显示一次,页面关闭后就看不了了,需要先将它复制下来。
 
-![1567148425875](C:/Users/yizl/AppData/Roaming/Typora/typora-user-images/1567148425875.png)
+![](https://cdn.jsdelivr.net/gh/yizuoliang/picBed/img/20190830145901.bmp)
 
 ![](https://cdn.jsdelivr.net/gh/yizuoliang/picBed/img/20190830150612.bmp)
 
@@ -46,4 +46,4 @@
 
 ![](https://cdn.jsdelivr.net/gh/yizuoliang/picBed/img/20190830154016.bmp)
 
-![1567151078062](C:/Users/yizl/AppData/Roaming/Typora/typora-user-images/1567151078062.png)
+![](https://cdn.jsdelivr.net/gh/yizuoliang/picBed/img/20190830154410.bmp)
