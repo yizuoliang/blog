@@ -2,34 +2,18 @@
 
 
 
-## 1.全文检索(Full-text Retrieval)
+## 1.[全文检索](<https://github.com/yizuoliang/blog/tree/master/Full-text%20Retrieval>)
 
-### 01_Lucene
+### [01_Lucene](https://github.com/yizuoliang/blog/tree/master/Full-text%20Retrieval/01_Lucene)
 
-Lucene介绍与应用,一些入门案例.
+### [02_SpringBoot+Lucene]( <https://github.com/yizuoliang/blog/tree/master/Full-text%20Retrieval/02_SpringBoot%2BLucene>)
 
-地址： <https://github.com/yizuoliang/blog/tree/master/Full-text%20Retrieval/01_Lucene>
+## 2.[Java基础](<https://github.com/yizuoliang/blog/tree/master/Java>)
 
-### 02_SpringBoot+Lucene
+### [01_Java_Proxy]( <https://github.com/yizuoliang/blog/tree/master/Java/01_Java_Proxy>)
 
-SpringBoot+Lucene的一些整合,在与SpringBoot的整合过程中的一些问题点.
+### [02_使用批处理方式配置Java环境]( <https://github.com/yizuoliang/blog/tree/master/Java/02_使用批处理方式配置Java环境>)
 
-地址： <https://github.com/yizuoliang/blog/tree/master/Full-text%20Retrieval/02_SpringBoot%2BLucene>
+## 3.[Github相关](<https://github.com/yizuoliang/blog/tree/master/Github%E7%9B%B8%E5%85%B3>)
 
-## 2.Java基础
-
-### 01_Java_Proxy
-
-Java的动态代理
-
-地址： <https://github.com/yizuoliang/blog/tree/master/Java/01_Java_Proxy>
-
-### 02_使用批处理方式配置Java环境
-
-地址： <https://github.com/yizuoliang/blog/tree/master/Java/02_使用批处理方式配置Java环境>
-
-## 3.Github相关
-
-### 01_GitHub+jsDelivr+PicGo搭建免费图床
-
-地址： <https://github.com/yizuoliang/blog/tree/master/Java/01_GitHub+jsDelivr+PicGo搭建免费图床>
+### [01_GitHub+jsDelivr+PicGo搭建免费图床](https://github.com/yizuoliang/blog/tree/master/Github相关/01_GitHub+jsDelivr+PicGo搭建免费图床)
