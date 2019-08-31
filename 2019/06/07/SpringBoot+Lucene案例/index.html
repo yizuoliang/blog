@@ -94,18 +94,18 @@
 
 
 
-  <meta name="description" content="SpringBoot+Lucene案例介绍GitHub仓库:https://github.com/yizuoliang/blog/tree/master/Full-text%20Retrieval/02_SpringBoot%2BLucene 一、案例介绍 模拟一个商品的站内搜索系统（类似淘宝的站内搜索）； 商品详情保存在mysql数据库的product表中，使用mybatis框架； 站内查询使用">
-<meta name="keywords" content="SpringBoot,Lucene">
+  <meta name="description" content="SpringBoot+Lucene案例介绍一、案例介绍 模拟一个商品的站内搜索系统（类似淘宝的站内搜索）； 商品详情保存在mysql数据库的product表中，使用mybatis框架； 站内查询使用Lucene创建索引，进行全文检索； 增、删、改，商品需要对Lucene索引修改，搜索也要达到近实时的效果。  对于数据库的操作和配置就不在本文中体现，主要讲解与Lucene的整合。 一、引入lucen">
+<meta name="keywords" content="Lucene,SpringBoot">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SpringBoot+Lucene案例介绍">
 <meta property="og:url" content="https://yizuoliang.github.io/2019/06/07/SpringBoot+Lucene案例/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="SpringBoot+Lucene案例介绍GitHub仓库:https://github.com/yizuoliang/blog/tree/master/Full-text%20Retrieval/02_SpringBoot%2BLucene 一、案例介绍 模拟一个商品的站内搜索系统（类似淘宝的站内搜索）； 商品详情保存在mysql数据库的product表中，使用mybatis框架； 站内查询使用">
+<meta property="og:description" content="SpringBoot+Lucene案例介绍一、案例介绍 模拟一个商品的站内搜索系统（类似淘宝的站内搜索）； 商品详情保存在mysql数据库的product表中，使用mybatis框架； 站内查询使用Lucene创建索引，进行全文检索； 增、删、改，商品需要对Lucene索引修改，搜索也要达到近实时的效果。  对于数据库的操作和配置就不在本文中体现，主要讲解与Lucene的整合。 一、引入lucen">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-02T00:48:38.795Z">
+<meta property="og:updated_time" content="2019-08-31T06:33:43.810Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringBoot+Lucene案例介绍">
-<meta name="twitter:description" content="SpringBoot+Lucene案例介绍GitHub仓库:https://github.com/yizuoliang/blog/tree/master/Full-text%20Retrieval/02_SpringBoot%2BLucene 一、案例介绍 模拟一个商品的站内搜索系统（类似淘宝的站内搜索）； 商品详情保存在mysql数据库的product表中，使用mybatis框架； 站内查询使用">
+<meta name="twitter:description" content="SpringBoot+Lucene案例介绍一、案例介绍 模拟一个商品的站内搜索系统（类似淘宝的站内搜索）； 商品详情保存在mysql数据库的product表中，使用mybatis框架； 站内查询使用Lucene创建索引，进行全文检索； 增、删、改，商品需要对Lucene索引修改，搜索也要达到近实时的效果。  对于数据库的操作和配置就不在本文中体现，主要讲解与Lucene的整合。 一、引入lucen">
 
 
 
@@ -423,7 +423,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-02 08:48:38" itemprop="dateModified" datetime="2019-07-02T08:48:38+08:00">2019-07-02</time>
+                <time title="修改时间：2019-08-31 14:33:43" itemprop="dateModified" datetime="2019-08-31T14:33:43+08:00">2019-08-31</time>
               
             
           </span>
@@ -475,8 +475,7 @@
       
 
       
-        <h1 id="SpringBoot-Lucene案例介绍"><a href="#SpringBoot-Lucene案例介绍" class="headerlink" title="SpringBoot+Lucene案例介绍"></a>SpringBoot+Lucene案例介绍</h1><p>GitHub仓库:<a href="https://github.com/yizuoliang/blog/tree/master/Full-text%20Retrieval/02_SpringBoot%2BLucene" target="_blank" rel="noopener">https://github.com/yizuoliang/blog/tree/master/Full-text%20Retrieval/02_SpringBoot%2BLucene</a></p>
-<h2 id="一、案例介绍"><a href="#一、案例介绍" class="headerlink" title="一、案例介绍"></a>一、案例介绍</h2><ul>
+        <h2 id="SpringBoot-Lucene案例介绍"><a href="#SpringBoot-Lucene案例介绍" class="headerlink" title="SpringBoot+Lucene案例介绍"></a><a href="https://github.com/yizuoliang/blog/tree/master/Full-text%20Retrieval/02_SpringBoot%2BLucene" target="_blank" rel="noopener">SpringBoot+Lucene案例介绍</a></h2><h2 id="一、案例介绍"><a href="#一、案例介绍" class="headerlink" title="一、案例介绍"></a>一、案例介绍</h2><ul>
 <li>模拟一个商品的站内搜索系统（类似淘宝的站内搜索）；</li>
 <li>商品详情保存在mysql数据库的product表中，使用mybatis框架；</li>
 <li>站内查询使用Lucene创建索引，进行全文检索；</li>
@@ -600,9 +599,9 @@
         
         <div class="post-tags">
           
-            <a href="/blog/tags/SpringBoot/" rel="tag"># SpringBoot</a>
-          
             <a href="/blog/tags/Lucene/" rel="tag"># Lucene</a>
+          
+            <a href="/blog/tags/SpringBoot/" rel="tag"># SpringBoot</a>
           
         </div>
       
@@ -615,8 +614,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2019/06/06/Lucene介绍与应用/" rel="next" title="Lucene介绍与应用">
-                <i class="fa fa-chevron-left"></i> Lucene介绍与应用
+              <a href="/blog/2019/06/07/java的动态代理/" rel="next" title="JDK的动态代理">
+                <i class="fa fa-chevron-left"></i> JDK的动态代理
               </a>
             
           </div>
@@ -624,6 +623,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2019/08/29/数据库索引/" rel="prev" title="数据库索引相关问题点">
+                数据库索引相关问题点 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -694,7 +697,7 @@
                 
                   <a href="/blog/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -713,7 +716,15 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -734,7 +745,27 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -772,7 +803,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SpringBoot-Lucene案例介绍"><span class="nav-number">1.</span> <span class="nav-text">SpringBoot+Lucene案例介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、案例介绍"><span class="nav-number">1.1.</span> <span class="nav-text">一、案例介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一、引入lucene的依赖"><span class="nav-number">1.2.</span> <span class="nav-text">一、引入lucene的依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、配置初始化Bean类"><span class="nav-number">1.3.</span> <span class="nav-text">三、配置初始化Bean类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、创建需要的Bean类"><span class="nav-number">1.4.</span> <span class="nav-text">四、创建需要的Bean类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、创建索引库"><span class="nav-number">1.5.</span> <span class="nav-text">五、创建索引库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-项目启动后执行同步数据库方法"><span class="nav-number">1.5.1.</span> <span class="nav-text">1.项目启动后执行同步数据库方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-从数据库中查询出所有的商品"><span class="nav-number">1.5.2.</span> <span class="nav-text">2.从数据库中查询出所有的商品</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-创建这些商品的索引"><span class="nav-number">1.5.3.</span> <span class="nav-text">3.创建这些商品的索引</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Field类的常用类型"><span class="nav-number">1.5.3.1.</span> <span class="nav-text">Field类的常用类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#commit-的用法"><span class="nav-number">1.5.3.2.</span> <span class="nav-text">commit()的用法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、多条件查询"><span class="nav-number">1.6.</span> <span class="nav-text">六、多条件查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七、删除更新索引"><span class="nav-number">1.7.</span> <span class="nav-text">七、删除更新索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、补全Spring中剩余代码"><span class="nav-number">1.8.</span> <span class="nav-text">八、补全Spring中剩余代码</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#SpringBoot-Lucene案例介绍"><span class="nav-number">1.</span> <span class="nav-text">SpringBoot+Lucene案例介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一、案例介绍"><span class="nav-number">2.</span> <span class="nav-text">一、案例介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一、引入lucene的依赖"><span class="nav-number">3.</span> <span class="nav-text">一、引入lucene的依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、配置初始化Bean类"><span class="nav-number">4.</span> <span class="nav-text">三、配置初始化Bean类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、创建需要的Bean类"><span class="nav-number">5.</span> <span class="nav-text">四、创建需要的Bean类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、创建索引库"><span class="nav-number">6.</span> <span class="nav-text">五、创建索引库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-项目启动后执行同步数据库方法"><span class="nav-number">6.1.</span> <span class="nav-text">1.项目启动后执行同步数据库方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-从数据库中查询出所有的商品"><span class="nav-number">6.2.</span> <span class="nav-text">2.从数据库中查询出所有的商品</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-创建这些商品的索引"><span class="nav-number">6.3.</span> <span class="nav-text">3.创建这些商品的索引</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Field类的常用类型"><span class="nav-number">6.3.1.</span> <span class="nav-text">Field类的常用类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#commit-的用法"><span class="nav-number">6.3.2.</span> <span class="nav-text">commit()的用法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、多条件查询"><span class="nav-number">7.</span> <span class="nav-text">六、多条件查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七、删除更新索引"><span class="nav-number">8.</span> <span class="nav-text">七、删除更新索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、补全Spring中剩余代码"><span class="nav-number">9.</span> <span class="nav-text">八、补全Spring中剩余代码</span></a></li></ol></div>
             
 
           </div>

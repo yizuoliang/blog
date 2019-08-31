@@ -94,17 +94,23 @@
 
 
 
-  <meta name="description" content="Keep on going never give up">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于我">
-<meta property="og:url" content="https://yizuoliang.github.io/about/index.html">
+  <meta name="description" content="数据库索引1.为什么要给表加上主键？ 没有创建主键的表,他的数据是无序的放在磁盘中,一行行的排列很整齐,查询时也要一行行的扫描。  创建了主键的表，在磁盘中的存储结构，由整齐的结构变成树状结构，也就是平衡树（B-Tree，B+Tree）结构。整个变成一个索引，也就是所谓的「聚集索引」。  当然，也有使用哈希结构的索引，主流的关系型数据库还是默认平衡树作为索引数据结构的。​    不同的数据库存储引">
+<meta name="keywords" content="数据库,mysql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据库索引相关问题点">
+<meta property="og:url" content="https://yizuoliang.github.io/2019/08/29/数据库索引/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="Keep on going never give up">
+<meta property="og:description" content="数据库索引1.为什么要给表加上主键？ 没有创建主键的表,他的数据是无序的放在磁盘中,一行行的排列很整齐,查询时也要一行行的扫描。  创建了主键的表，在磁盘中的存储结构，由整齐的结构变成树状结构，也就是平衡树（B-Tree，B+Tree）结构。整个变成一个索引，也就是所谓的「聚集索引」。  当然，也有使用哈希结构的索引，主流的关系型数据库还是默认平衡树作为索引数据结构的。​    不同的数据库存储引">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-28T07:27:49.090Z">
+<meta property="og:image" content="https://yizuoliang.github.io/blog/2019/08/29/数据库索引/F:%5Cpicture%5CBTree.png">
+<meta property="og:image" content="https://yizuoliang.github.io/blog/2019/08/29/数据库索引/F:%5Cpicture%5CBTree1.png">
+<meta property="og:image" content="https://yizuoliang.github.io/blog/2019/08/29/数据库索引/F:%5Cpicture%5C%E6%9F%A5%E6%89%BE%E6%AC%A1%E6%95%B0%E7%AE%97%E6%B3%95.png">
+<meta property="og:image" content="https://yizuoliang.github.io/blog/2019/08/29/数据库索引/F:%5Cpicture%5C%E9%9D%9E%E8%81%9A%E9%9B%86%E6%80%A7%E7%B4%A2%E5%BC%95.jpg">
+<meta property="og:updated_time" content="2019-08-31T06:35:18.231Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于我">
-<meta name="twitter:description" content="Keep on going never give up">
+<meta name="twitter:title" content="数据库索引相关问题点">
+<meta name="twitter:description" content="数据库索引1.为什么要给表加上主键？ 没有创建主键的表,他的数据是无序的放在磁盘中,一行行的排列很整齐,查询时也要一行行的扫描。  创建了主键的表，在磁盘中的存储结构，由整齐的结构变成树状结构，也就是平衡树（B-Tree，B+Tree）结构。整个变成一个索引，也就是所谓的「聚集索引」。  当然，也有使用哈希结构的索引，主流的关系型数据库还是默认平衡树作为索引数据结构的。​    不同的数据库存储引">
+<meta name="twitter:image" content="https://yizuoliang.github.io/blog/2019/08/29/数据库索引/F:%5Cpicture%5CBTree.png">
 
 
 
@@ -112,7 +118,7 @@
 
   
   
-  <link rel="canonical" href="https://yizuoliang.github.io/about/">
+  <link rel="canonical" href="https://yizuoliang.github.io/2019/08/29/数据库索引/">
 
 
 
@@ -122,7 +128,7 @@
   };
 </script>
 
-  <title>关于我 | 个人博客</title>
+  <title>数据库索引相关问题点 | 个人博客</title>
   
 
 
@@ -224,7 +230,7 @@
         
         
           
-          <li class="menu-item menu-item-about menu-item-active">
+          <li class="menu-item menu-item-about">
 
     
     
@@ -342,78 +348,252 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yizuoliang.github.io/blog/2019/08/29/数据库索引/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yizuoliang">
+      <meta itemprop="description" content="Keep on going never give up">
+      <meta itemprop="image" content="/blog/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">关于我
-
-</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
+        
+          <h1 class="post-title" itemprop="name headline">数据库索引相关问题点
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-29 09:38:36" itemprop="dateCreated datePublished" datetime="2019-08-29T09:38:36+08:00">2019-08-29</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-31 14:35:18" itemprop="dateModified" datetime="2019-08-31T14:35:18+08:00">2019-08-31</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/数据库/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="数据库索引"><a href="#数据库索引" class="headerlink" title="数据库索引"></a><a href="https://github.com/yizuoliang/blog/tree/master/数据库相关/03_数据库索引" target="_blank" rel="noopener">数据库索引</a></h1><h2 id="1-为什么要给表加上主键？"><a href="#1-为什么要给表加上主键？" class="headerlink" title="1.为什么要给表加上主键？"></a>1.为什么要给表加上主键？</h2><pre><code> 没有创建主键的表,他的数据是无序的放在磁盘中,一行行的排列很整齐,查询时也要一行行的扫描。
+
+创建了主键的表，在磁盘中的存储结构，由整齐的结构变成树状结构，也就是平衡树（B-Tree，B+Tree）结构。整个变成一个索引，也就是所谓的「聚集索引」。
+
+当然，也有使用哈希结构的索引，主流的关系型数据库还是默认平衡树作为索引数据结构的。</code></pre><p>​    不同的数据库存储引擎，创建的索引结构也不同。</p>
+<h2 id="2-为什么一个表只能有一个主键？"><a href="#2-为什么一个表只能有一个主键？" class="headerlink" title="2.为什么一个表只能有一个主键？"></a>2.为什么一个表只能有一个主键？</h2><pre><code>一个表只能有一个「聚集索引」，因为主键的作用是把表的数据格式转化为树形结构放置，所以一个表只有一个主键。</code></pre><p>​    联合主键是主键的一种,是由多个字段组成的主键,主键并不一定只有一个字段,这里要搞清楚。</p>
+<h2 id="3-为什么加索引后会使查询变快？"><a href="#3-为什么加索引后会使查询变快？" class="headerlink" title="3.为什么加索引后会使查询变快？"></a>3.为什么加索引后会使查询变快？</h2><p>​    select * from table where id=82；</p>
+<p>​    假如一张他table表有一亿条数据 ，需要查找id为82的数据，没创建索引的情况，可能是一条一条的去匹配，最差的打算是需要匹配一亿次，一亿次匹配查询，就是一亿次IO开销，按照服务器的I/O能力与CPU的运算能力，需要几个月才能得出结果。</p>
+<p>​    往table表中添加id为主键，表的数据结构变化为平衡树结构。</p>
+<p>​    </p>
+<p><img src="/blog/2019/08/29/数据库索引/F:%5Cpicture%5CBTree.png" alt="BTree"></p>
+<p>​    树形结构：由根节(root)、分支(branches)、叶(leaves)三级节点组成，其中分支节点可以有多层。</p>
+<p>​    下图展示定位id为82的过程：</p>
+<p>​    <img src="/blog/2019/08/29/数据库索引/F:%5Cpicture%5CBTree1.png" alt="BTree1"></p>
+<p>算法步骤：</p>
+<p>​    1.读取root节点，判断82大于在0-120之间，走左边分支；</p>
+<p>​    2.读取左边branch节点，判断82大于80且小于等于120，走右边分支；</p>
+<p>​    3.读取右边leaf节点，在该节点中找到数据82及对应的id；</p>
+<p>​    4.使用rowid去物理表中读取记录数据块。</p>
+<p>在整个索引中，只进行了三次I/O操作，就定位到了id。</p>
+<p>对于一亿的数据量最多要查询多少次呢？</p>
+<p><img src="/blog/2019/08/29/数据库索引/F:%5Cpicture%5C%E6%9F%A5%E6%89%BE%E6%AC%A1%E6%95%B0%E7%AE%97%E6%B3%95.png" alt="查找次数算法"></p>
+<p>树形结构，数据每增加一层，数据量就是成指数级的增长。</p>
+<p>如果有2个分支,一亿条数据,最多查询27次就可以定位到数据,如果树结构是4个分叉,最多15次就能查到.</p>
+<h2 id="4-为什么加索引后会使写入、修改、删除变慢？"><a href="#4-为什么加索引后会使写入、修改、删除变慢？" class="headerlink" title="4.为什么加索引后会使写入、修改、删除变慢？"></a>4.为什么加索引后会使写入、修改、删除变慢？</h2><p>​    原因很简单，删改数据都会改变平衡树各节点中的索引数据内容，破坏树结构，每次数据改变时，数据库管理系统都要重新梳理树结构，还会带来不小的性能开销。索引会给查询以外的操作带来副作用。</p>
+<h2 id="5-非聚集索引是怎样的呢？"><a href="#5-非聚集索引是怎样的呢？" class="headerlink" title="5.非聚集索引是怎样的呢？"></a>5.非聚集索引是怎样的呢？</h2><p>​    非聚集索引，就是我们平时使用的向某个字段添加索引，非聚集索引和聚集索引一样，同样可以采用平衡树作为索引数据结构，索引树各节点中的值，来自于表中字段的值，如果给字段创建一个索引，字段的值就会被复制出来，用于创建索引。给表添加索引，就会增加表的体积，占用更多的磁盘存储空间。非聚集索引都是独立存在的，每个索引之间不存在关联。</p>
+<p><img src="/blog/2019/08/29/数据库索引/F:%5Cpicture%5C%E9%9D%9E%E8%81%9A%E9%9B%86%E6%80%A7%E7%B4%A2%E5%BC%95.jpg" alt="非聚集性索引"></p>
+<h2 id="6-聚集索引和非聚集索引的区别？"><a href="#6-聚集索引和非聚集索引的区别？" class="headerlink" title="6.聚集索引和非聚集索引的区别？"></a>6.聚集索引和非聚集索引的区别？</h2><p>​    通过聚集索引可以查到需要查找到的是每行的数据，通过非聚集索引查到的是记录对应的主键，再通过主键查找相应的值。不管任何查表的方式，都会通过主键定位到数据，聚集索引（主键）是通往数据的唯一途径。</p>
+<h2 id="7-什么情况下要同时在两个字段上建索引？"><a href="#7-什么情况下要同时在两个字段上建索引？" class="headerlink" title="7.什么情况下要同时在两个字段上建索引？"></a>7.什么情况下要同时在两个字段上建索引？</h2><p>​    可能还有一种特殊情况，可以不通过聚集索引就得到需要的数据，这种非主流的方法 称之为「覆盖索引」查询。也就是平时创建的复合索引或者多字段索引查询。为一个索引指定两个字段，那么两个字段的内容就同步到索引中。如果通过其中的一个字段查另一个字段时，正好在索引中有存储，就不用通过聚集索引啦。</p>
+<p>//创建用户的index_name_and_age 索引</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create index index_name_and_age on user_info(name, age);</span><br></pre></td></tr></table></figure>
+
+<p>//通过用户名查找年龄</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select age from user where name = &apos;科比&apos;;</span><br></pre></td></tr></table></figure>
+
+<p>这种情况,可以创建复合索引了。</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
         
           
         
-      </div>
+        <div class="post-tags">
+          
+            <a href="/blog/tags/数据库/" rel="tag"># 数据库</a>
+          
+            <a href="/blog/tags/mysql/" rel="tag"># mysql</a>
+          
+        </div>
+      
+
       
       
       
-    </div>
-    
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2019/06/07/SpringBoot+Lucene案例/" rel="next" title="SpringBoot+Lucene案例介绍">
+                <i class="fa fa-chevron-left"></i> SpringBoot+Lucene案例介绍
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2019/08/30/使用批处理方式配置Java环境/" rel="prev" title="使用批处理方式配置Java环境">
+                使用批处理方式配置Java环境 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
 
 
-
-    
-    
-    
   </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -433,8 +613,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -546,6 +735,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据库索引"><span class="nav-number">1.</span> <span class="nav-text">数据库索引</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-为什么要给表加上主键？"><span class="nav-number">1.1.</span> <span class="nav-text">1.为什么要给表加上主键？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-为什么一个表只能有一个主键？"><span class="nav-number">1.2.</span> <span class="nav-text">2.为什么一个表只能有一个主键？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-为什么加索引后会使查询变快？"><span class="nav-number">1.3.</span> <span class="nav-text">3.为什么加索引后会使查询变快？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-为什么加索引后会使写入、修改、删除变慢？"><span class="nav-number">1.4.</span> <span class="nav-text">4.为什么加索引后会使写入、修改、删除变慢？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-非聚集索引是怎样的呢？"><span class="nav-number">1.5.</span> <span class="nav-text">5.非聚集索引是怎样的呢？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-聚集索引和非聚集索引的区别？"><span class="nav-number">1.6.</span> <span class="nav-text">6.聚集索引和非聚集索引的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-什么情况下要同时在两个字段上建索引？"><span class="nav-number">1.7.</span> <span class="nav-text">7.什么情况下要同时在两个字段上建索引？</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -696,6 +902,8 @@
 
   
 
+
+  
 
 
   
