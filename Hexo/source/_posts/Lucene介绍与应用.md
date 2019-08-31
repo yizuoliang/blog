@@ -6,11 +6,7 @@ categories: 全文检索技术
 tags: [ Lucene]
 ---
 
-
-
-# Lucene介绍与应用
-
-GitHub仓库:<https://github.com/yizuoliang/blog/tree/master/Full-text%20Retrieval>
+# [Lucene介绍与应用](https://github.com/yizuoliang/blog/tree/master/Full-text%20Retrieval/01_Lucene)
 
 ## 一、全文检索介绍
 

@@ -5,9 +5,7 @@ date: 2019-06-07 00:38:36
 categories: 全文检索技术
 tags: [SpringBoot, Lucene]
 ---
-# SpringBoot+Lucene案例介绍
-
-GitHub仓库:<https://github.com/yizuoliang/blog/tree/master/Full-text%20Retrieval/02_SpringBoot%2BLucene>
+## [SpringBoot+Lucene案例介绍]( <https://github.com/yizuoliang/blog/tree/master/Full-text%20Retrieval/02_SpringBoot%2BLucene>)
 
 ## 一、案例介绍
 
