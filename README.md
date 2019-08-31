@@ -20,8 +20,8 @@
 
 ## 4.[数据库相关](<https://github.com/yizuoliang/blog/tree/master/数据库%E7%9B%B8%E5%85%B3>)
 
-### [01_mysql数据库存储引擎](https://github.com/yizuoliang/blog/tree/master/数据库相关/01_mysql数据库存储引擎>)
+### [01_mysql数据库存储引擎](https://github.com/yizuoliang/blog/tree/master/数据库相关/01_mysql数据库存储引擎)
 
 ### [02_使用Navicat生成ER图](https://github.com/yizuoliang/blog/tree/master/数据库相关/02_使用Navicat生成ER图)
 
-### [03_数据库索引](https://github.com/yizuoliang/blog/tree/master/数据库相关/03_数据库索引])
+### [03_数据库索引](https://github.com/yizuoliang/blog/tree/master/数据库相关/03_数据库索引)
