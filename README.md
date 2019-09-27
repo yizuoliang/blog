@@ -28,4 +28,4 @@
 
 ## 5.[Quartz框架](<https://github.com/yizuoliang/blog/tree/master/Quartz框架>)
 
-### [01_GitHub+jsDelivr+PicGo搭建免费图床](https://github.com/yizuoliang/blog/tree/master/Quartz框架/01_Quartz框架中CronTigger周期性调度问题)
+### [01_Quartz框架中CronTigger周期性调度问题](https://github.com/yizuoliang/blog/tree/master/Quartz框架/01_Quartz框架中CronTigger周期性调度问题)
