@@ -25,3 +25,7 @@
 ### [02_使用Navicat生成ER图](https://github.com/yizuoliang/blog/tree/master/数据库相关/02_使用Navicat生成ER图)
 
 ### [03_数据库索引](https://github.com/yizuoliang/blog/tree/master/数据库相关/03_数据库索引)
+
+## 5.[Quartz框架](<https://github.com/yizuoliang/blog/tree/master/Quartz框架>)
+
+### [01_GitHub+jsDelivr+PicGo搭建免费图床](https://github.com/yizuoliang/blog/tree/master/Quartz框架/01_Quartz框架中CronTigger周期性调度问题)
