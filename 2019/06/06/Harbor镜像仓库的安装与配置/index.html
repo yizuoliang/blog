@@ -94,18 +94,18 @@
 
 
 
-  <meta name="description" content="Quartz框架中CronTigger周期性调度问题一、问题点​    quartz定时任务设置每32秒执行一次，如果CronTigger调度器，cron表达式可能会写成这样：0/32 * * * * ? ， 那么问题来了，调度执行结果为： 123456最近5次运行时间:        2019/9/27 15:12:32        2019/9/27 15:13:00        2019">
-<meta name="keywords" content="quartz">
+  <meta name="description" content="Harbor镜像仓库的安装与配置一、安装Harbor1.环境准备：​    1.一台Centos7服务器(docker已安装, ip : 192.168.1.105),此服务器准备安装镜像仓库; ​    2.一台Centos7服务器(docker已安装, ip : 192.168.1.106),此服务器测试从Harbor镜像仓库push和pull镜像用。 2.下载Harbor安装下载安装包：ht">
+<meta name="keywords" content="docker">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Quartz框架中CronTigger周期性调度问题">
-<meta property="og:url" content="https://yizuoliang.github.io/2019/09/27/Quartz框架中CronTigger周期性调度问题/index.html">
+<meta property="og:title" content="Harbor镜像仓库的安装与配置">
+<meta property="og:url" content="https://yizuoliang.github.io/2019/06/06/Harbor镜像仓库的安装与配置/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="Quartz框架中CronTigger周期性调度问题一、问题点​    quartz定时任务设置每32秒执行一次，如果CronTigger调度器，cron表达式可能会写成这样：0/32 * * * * ? ， 那么问题来了，调度执行结果为： 123456最近5次运行时间:        2019/9/27 15:12:32        2019/9/27 15:13:00        2019">
+<meta property="og:description" content="Harbor镜像仓库的安装与配置一、安装Harbor1.环境准备：​    1.一台Centos7服务器(docker已安装, ip : 192.168.1.105),此服务器准备安装镜像仓库; ​    2.一台Centos7服务器(docker已安装, ip : 192.168.1.106),此服务器测试从Harbor镜像仓库push和pull镜像用。 2.下载Harbor安装下载安装包：ht">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-27T07:41:46.940Z">
+<meta property="og:updated_time" content="2020-08-04T03:24:39.483Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Quartz框架中CronTigger周期性调度问题">
-<meta name="twitter:description" content="Quartz框架中CronTigger周期性调度问题一、问题点​    quartz定时任务设置每32秒执行一次，如果CronTigger调度器，cron表达式可能会写成这样：0/32 * * * * ? ， 那么问题来了，调度执行结果为： 123456最近5次运行时间:        2019/9/27 15:12:32        2019/9/27 15:13:00        2019">
+<meta name="twitter:title" content="Harbor镜像仓库的安装与配置">
+<meta name="twitter:description" content="Harbor镜像仓库的安装与配置一、安装Harbor1.环境准备：​    1.一台Centos7服务器(docker已安装, ip : 192.168.1.105),此服务器准备安装镜像仓库; ​    2.一台Centos7服务器(docker已安装, ip : 192.168.1.106),此服务器测试从Harbor镜像仓库push和pull镜像用。 2.下载Harbor安装下载安装包：ht">
 
 
 
@@ -113,7 +113,7 @@
 
   
   
-  <link rel="canonical" href="https://yizuoliang.github.io/2019/09/27/Quartz框架中CronTigger周期性调度问题/">
+  <link rel="canonical" href="https://yizuoliang.github.io/2019/06/06/Harbor镜像仓库的安装与配置/">
 
 
 
@@ -123,7 +123,7 @@
   };
 </script>
 
-  <title>Quartz框架中CronTigger周期性调度问题 | 个人博客</title>
+  <title>Harbor镜像仓库的安装与配置 | 个人博客</title>
   
 
 
@@ -363,7 +363,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yizuoliang.github.io/blog/2019/09/27/Quartz框架中CronTigger周期性调度问题/">
+    <link itemprop="mainEntityOfPage" href="https://yizuoliang.github.io/blog/2019/06/06/Harbor镜像仓库的安装与配置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yizuoliang">
@@ -380,7 +380,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Quartz框架中CronTigger周期性调度问题
+          <h1 class="post-title" itemprop="name headline">Harbor镜像仓库的安装与配置
 
               
             
@@ -406,12 +406,24 @@
                 
               
 
-              <time title="创建时间：2019-09-27 15:38:36 / 修改时间：15:41:46" itemprop="dateCreated datePublished" datetime="2019-09-27T15:38:36+08:00">2019-09-27</time>
+              <time title="创建时间：2019-06-06 00:38:36" itemprop="dateCreated datePublished" datetime="2019-06-06T00:38:36+08:00">2019-06-06</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-08-04 11:24:39" itemprop="dateModified" datetime="2020-08-04T11:24:39+08:00">2020-08-04</time>
               
             
           </span>
@@ -428,7 +440,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/定时任务框架/" itemprop="url" rel="index"><span itemprop="name">定时任务框架</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/docker镜像仓库/" itemprop="url" rel="index"><span itemprop="name">docker镜像仓库</span></a></span>
 
                 
                 
@@ -463,12 +475,67 @@
       
 
       
-        <h1 id="Quartz框架中CronTigger周期性调度问题"><a href="#Quartz框架中CronTigger周期性调度问题" class="headerlink" title="Quartz框架中CronTigger周期性调度问题"></a>Quartz框架中CronTigger周期性调度问题</h1><h2 id="一、问题点"><a href="#一、问题点" class="headerlink" title="一、问题点"></a>一、问题点</h2><p>​    quartz定时任务设置每32秒执行一次，如果CronTigger调度器，cron表达式可能会写成这样：0/32 * * * * ? ，</p>
-<p>那么问题来了，调度执行结果为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">最近5次运行时间:</span><br><span class="line">        2019/9/27 15:12:32</span><br><span class="line">        2019/9/27 15:13:00</span><br><span class="line">        2019/9/27 15:13:32</span><br><span class="line">        2019/9/27 15:14:00</span><br><span class="line">        2019/9/27 15:14:32</span><br></pre></td></tr></table></figure>
+        <h1 id="Harbor镜像仓库的安装与配置"><a href="#Harbor镜像仓库的安装与配置" class="headerlink" title="Harbor镜像仓库的安装与配置"></a>Harbor镜像仓库的安装与配置</h1><h2 id="一、安装Harbor"><a href="#一、安装Harbor" class="headerlink" title="一、安装Harbor"></a>一、安装Harbor</h2><h3 id="1-环境准备："><a href="#1-环境准备：" class="headerlink" title="1.环境准备："></a>1.环境准备：</h3><p>​    1.一台Centos7服务器(docker已安装, ip : 192.168.1.105),此服务器准备安装镜像仓库;</p>
+<p>​    2.一台Centos7服务器(docker已安装, ip : 192.168.1.106),此服务器测试从Harbor镜像仓库push和pull镜像用。</p>
+<h3 id="2-下载Harbor安装"><a href="#2-下载Harbor安装" class="headerlink" title="2.下载Harbor安装"></a>2.下载Harbor安装</h3><p>下载安装包：<a href="https://github.com/goharbor/harbor/releases" target="_blank" rel="noopener">https://github.com/goharbor/harbor/releases</a></p>
+<h4 id="1-解压压缩包"><a href="#1-解压压缩包" class="headerlink" title="1.解压压缩包"></a>1.解压压缩包</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar zxvf harbor-online-installer-v1.8.1.tgz</span><br></pre></td></tr></table></figure>
 
-<p>从结果将会发现，循环周期为32,28秒。如果做分钟的间隔周期也会是一样，不满足需求，特别是有时候超过60的时候，不能被60整除的循环都会出现此问题。如果需求要求可以动态更改调度时间，就更不好做了。Cron表达式对这种方式不是很友好。</p>
-<h2 id="二、解决方法"><a href="#二、解决方法" class="headerlink" title="二、解决方法"></a>二、解决方法</h2><p>​    这个时候，我们可以选择使用Simple Trigger调度器，在具体的时间点执行一次，或者在具体的时间点执行，并且以指定的间隔重复执行若干次。</p>
+<h4 id="2-配置harbor-yml文件"><a href="#2-配置harbor-yml文件" class="headerlink" title="2.配置harbor.yml文件"></a>2.配置harbor.yml文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">hostname: 192.168.1.105</span><br><span class="line"></span><br><span class="line">http:</span><br><span class="line">port will redirect to https port</span><br><span class="line">  port: 80</span><br><span class="line"></span><br><span class="line">https:</span><br><span class="line">  port: 443</span><br><span class="line">  certificate: /data/cert/192.168.1.105.crt</span><br><span class="line">  private_key: /data/cert/192.168.1.105.key</span><br><span class="line"></span><br><span class="line">harbor_admin_password: Harbor12345</span><br><span class="line"></span><br><span class="line">database:</span><br><span class="line">  password: root123</span><br><span class="line">  </span><br><span class="line">data_volume: /data</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-运行prepare文件"><a href="#3-运行prepare文件" class="headerlink" title="3.运行prepare文件"></a>3.运行prepare文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./prepare</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-安装"><a href="#4-安装" class="headerlink" title="4.安装"></a>4.安装</h4><p>​    服务器必须先安装Docker Compose</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./install.sh</span><br></pre></td></tr></table></figure>
+
+<p>安装完成,可以在浏览器中登录;但是使用另一台主机从镜像仓库中拉取镜像时将报错:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http: server gave HTTP response to HTTPS client</span><br></pre></td></tr></table></figure>
+
+<p>原因是docker作为客户端,发送的是https请求,仓库未配置https.</p>
+<h2 id="二、配置Harbor的HTTPS访问"><a href="#二、配置Harbor的HTTPS访问" class="headerlink" title="二、配置Harbor的HTTPS访问"></a>二、配置Harbor的HTTPS访问</h2><p>可参考:    <a href="https://goharbor.io/docs/2.0.0/install-config/configure-https/" target="_blank" rel="noopener">https://goharbor.io/docs/2.0.0/install-config/configure-https/</a></p>
+<p>以下ip修改为Harbor服务器的ip</p>
+<h3 id="1-创建CA证书"><a href="#1-创建CA证书" class="headerlink" title="1.创建CA证书"></a>1.创建CA证书</h3><p>​    生成CA证书私钥</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openssl genrsa -out ca.key 4096</span><br></pre></td></tr></table></figure>
+
+<p>​    生成CA证书</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">openssl req -x509 -new -nodes -sha512 -days 3650 \</span><br><span class="line"> -subj &quot;/C=CN/ST=Beijing/L=Beijing/O=example/OU=Personal/CN=192.168.1.105&quot;\</span><br><span class="line"> -key ca.key \</span><br><span class="line"> -out ca.crt</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-生成服务器证书"><a href="#2-生成服务器证书" class="headerlink" title="2.生成服务器证书"></a>2.生成服务器证书</h3><p>​    生成服务器证书私钥</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openssl genrsa -out 192.168.1.105.key 4096</span><br></pre></td></tr></table></figure>
+
+<p>​    生成服务器证书</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">openssl req -sha512 -new \</span><br><span class="line">    -subj &quot;/C=CN/ST=Beijing/L=Beijing/O=example/OU=Personal/CN=192.168.1.105&quot; \</span><br><span class="line">    -key 92.168.1.105.key \</span><br><span class="line">    -out 92.168.1.105.csr</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-生成-x509-v3扩展文件"><a href="#3-生成-x509-v3扩展文件" class="headerlink" title="3.生成 x509 v3扩展文件"></a>3.生成 x509 v3扩展文件</h3><p>这里不能按照官网的安装,官网使用的事域名.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cat &gt; v3.ext &lt;&lt;-EOF</span><br><span class="line">authorityKeyIdentifier=keyid,issuer</span><br><span class="line">basicConstraints=CA:FALSE</span><br><span class="line">keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment</span><br><span class="line">extendedKeyUsage = serverAuth</span><br><span class="line">subjectAltName = 192.168.1.105</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-向Harbor和Docker提供证书"><a href="#4-向Harbor和Docker提供证书" class="headerlink" title="4.向Harbor和Docker提供证书"></a>4.向Harbor和Docker提供证书</h3><h3 id="1-向Harbor提供证书"><a href="#1-向Harbor提供证书" class="headerlink" title="1.向Harbor提供证书"></a>1.向Harbor提供证书</h3><p>harbor.yml配置文件中,certificate和private_key文件路径在/data/cert/下,所以要把生成的服务器证书放在这个目录下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir /data/cert/</span><br><span class="line">cp 192.168.1.105.crt /data/cert/</span><br><span class="line">cp 192.168.1.105.key /data/cert/</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-向docker提供证书"><a href="#2-向docker提供证书" class="headerlink" title="2.向docker提供证书"></a>2.向docker提供证书</h3><p>将.crt文件转换为.cert文件,供docker使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openssl x509 -inform PEM -in yourdomain.com.crt -out yourdomain.com.cert</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /etc/docker/certs.d/192.168.1.105/</span><br><span class="line">cp 192.168.1.105.cert /etc/docker/certs.d/192.168.1.105/</span><br><span class="line">cp 192.168.1.105.key /etc/docker/certs.d/192.168.1.105/</span><br><span class="line">cp ca.crt /etc/docker/certs.d/192.168.1.105/</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-重启docker"><a href="#3-重启docker" class="headerlink" title="3.重启docker"></a>3.重启docker</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
+
+<h2 id="三、验证-测试"><a href="#三、验证-测试" class="headerlink" title="三、验证,测试"></a>三、验证,测试</h2><h3 id="1-浏览器使用https登录"><a href="#1-浏览器使用https登录" class="headerlink" title="1.浏览器使用https登录"></a>1.浏览器使用https登录</h3><p>将192.168.1.105.crt拷贝至本机安装,浏览器就能用https正常访问.</p>
+<h3 id="2-测试docker能否正常登录"><a href="#2-测试docker能否正常登录" class="headerlink" title="2.测试docker能否正常登录"></a>2.测试docker能否正常登录</h3><h4 id="1-使用192-168-1-106服务器登录Harbor"><a href="#1-使用192-168-1-106服务器登录Harbor" class="headerlink" title="1.使用192.168.1.106服务器登录Harbor"></a>1.使用192.168.1.106服务器登录Harbor</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker login 192.168.1.105</span><br></pre></td></tr></table></figure>
+
+<p>将报错:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Error response from daemon: Get https://192.168.1.105/v2/: x509: certificate signed by unknown authority</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-制作的ca证书添加到信任（因为是自签名证书"><a href="#2-制作的ca证书添加到信任（因为是自签名证书" class="headerlink" title="2.制作的ca证书添加到信任（因为是自签名证书):"></a>2.制作的ca证书添加到信任（因为是自签名证书):</h4><p>将ca.crt拷贝至192.168.1.106主机</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir –p /etc/docker/certs.d/192.168.1.105</span><br><span class="line">cp ca.crt /etc/docker/certs.d/192.168.1.105/ca.crt</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
+
+<p>出现:Login Succeeded,表示登录成功</p>
+<h2 id="四、推送和拉取镜像"><a href="#四、推送和拉取镜像" class="headerlink" title="四、推送和拉取镜像"></a>四、推送和拉取镜像</h2><h3 id="1-标记镜像"><a href="#1-标记镜像" class="headerlink" title="1.标记镜像"></a>1.标记镜像</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker tag SOURCE_IMAGE[:TAG] 192.168.1.105/项目名/IMAGE[:TAG]</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-推送镜像到Harbor"><a href="#2-推送镜像到Harbor" class="headerlink" title="2.推送镜像到Harbor"></a>2.推送镜像到Harbor</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker push 10.82.13.105/项目名/IMAGE[:TAG]</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-从Harbor中拉取镜像"><a href="#3-从Harbor中拉取镜像" class="headerlink" title="3.从Harbor中拉取镜像"></a>3.从Harbor中拉取镜像</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull 10.82.13.105/项目名/IMAGE[:TAG]</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -495,7 +562,7 @@
         
         <div class="post-tags">
           
-            <a href="/blog/tags/quartz/" rel="tag"># quartz</a>
+            <a href="/blog/tags/docker/" rel="tag"># docker</a>
           
         </div>
       
@@ -508,8 +575,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2019/08/31/GitHub+jsDelivr+PicGo搭建免费图床/" rel="next" title="GitHub+jsDelivr+PicGo搭建免费图床">
-                <i class="fa fa-chevron-left"></i> GitHub+jsDelivr+PicGo搭建免费图床
+              <a href="/blog/2019/06/06/Lucene介绍与应用/" rel="next" title="Lucene介绍与应用">
+                <i class="fa fa-chevron-left"></i> Lucene介绍与应用
               </a>
             
           </div>
@@ -517,6 +584,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2019/06/07/java的动态代理/" rel="prev" title="JDK的动态代理">
+                JDK的动态代理 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -701,7 +772,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Quartz框架中CronTigger周期性调度问题"><span class="nav-number">1.</span> <span class="nav-text">Quartz框架中CronTigger周期性调度问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、问题点"><span class="nav-number">1.1.</span> <span class="nav-text">一、问题点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、解决方法"><span class="nav-number">1.2.</span> <span class="nav-text">二、解决方法</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Harbor镜像仓库的安装与配置"><span class="nav-number">1.</span> <span class="nav-text">Harbor镜像仓库的安装与配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、安装Harbor"><span class="nav-number">1.1.</span> <span class="nav-text">一、安装Harbor</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-环境准备："><span class="nav-number">1.1.1.</span> <span class="nav-text">1.环境准备：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-下载Harbor安装"><span class="nav-number">1.1.2.</span> <span class="nav-text">2.下载Harbor安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-解压压缩包"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">1.解压压缩包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-配置harbor-yml文件"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">2.配置harbor.yml文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-运行prepare文件"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">3.运行prepare文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-安装"><span class="nav-number">1.1.2.4.</span> <span class="nav-text">4.安装</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、配置Harbor的HTTPS访问"><span class="nav-number">1.2.</span> <span class="nav-text">二、配置Harbor的HTTPS访问</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-创建CA证书"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.创建CA证书</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-生成服务器证书"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.生成服务器证书</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-生成-x509-v3扩展文件"><span class="nav-number">1.2.3.</span> <span class="nav-text">3.生成 x509 v3扩展文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-向Harbor和Docker提供证书"><span class="nav-number">1.2.4.</span> <span class="nav-text">4.向Harbor和Docker提供证书</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-向Harbor提供证书"><span class="nav-number">1.2.5.</span> <span class="nav-text">1.向Harbor提供证书</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-向docker提供证书"><span class="nav-number">1.2.6.</span> <span class="nav-text">2.向docker提供证书</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-重启docker"><span class="nav-number">1.2.7.</span> <span class="nav-text">3.重启docker</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、验证-测试"><span class="nav-number">1.3.</span> <span class="nav-text">三、验证,测试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-浏览器使用https登录"><span class="nav-number">1.3.1.</span> <span class="nav-text">1.浏览器使用https登录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-测试docker能否正常登录"><span class="nav-number">1.3.2.</span> <span class="nav-text">2.测试docker能否正常登录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-使用192-168-1-106服务器登录Harbor"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">1.使用192.168.1.106服务器登录Harbor</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-制作的ca证书添加到信任（因为是自签名证书"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">2.制作的ca证书添加到信任（因为是自签名证书):</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、推送和拉取镜像"><span class="nav-number">1.4.</span> <span class="nav-text">四、推送和拉取镜像</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-标记镜像"><span class="nav-number">1.4.1.</span> <span class="nav-text">1.标记镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-推送镜像到Harbor"><span class="nav-number">1.4.2.</span> <span class="nav-text">2.推送镜像到Harbor</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-从Harbor中拉取镜像"><span class="nav-number">1.4.2.1.</span> <span class="nav-text">3.从Harbor中拉取镜像</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
